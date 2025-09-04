@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'PP Neue Montreal';
+  src: url('/fonts/ppneuemontreal-thin.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Neue Montreal';
+  src: url('/fonts/ppneuemontreal-book.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Neue Montreal';
+  src: url('/fonts/ppneuemontreal-medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Neue Montreal';
+  src: url('/fonts/ppneuemontreal-bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Neue Montreal';
+  src: url('/fonts/ppneuemontreal-italic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Neue Montreal';
+  src: url('/fonts/ppneuemontreal-semibolditalic.otf') format('opentype');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@layer base {
+  body {
+    @apply bg-n-1 font-work text-base text-black;
+  }
+}
+
+.blue__gradient {
+  background: linear-gradient(
+    to bottom,
+    rgba(2, 125, 236, 0.8),
+    rgba(21, 226, 159, 0.8)
+  );
+}
+
+.button__gradient {
+  background: linear-gradient(93deg, #027dec, #15e29f);
+  background-size: 200% 200%;
+  background-position: left center;
+  transition: background-position 0.4s ease-in-out;
+}
+
+.button__gradient:hover {
+  background-position: right center;
+}
+
+.text-gradient {
+  background: linear-gradient(93deg, #027dec -2.54%, #15e29f 144.52%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.stroke-gradient {
+  position: relative;
+  border-radius: 15px;
+  
+}
+
+.stroke-gradient::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.5px; /* thickness of border */
+  background: linear-gradient(
+    260deg,
+    rgb(21, 226, 159, 0.6),
+    rgba(255, 255, 255, 0.2)
+  );
+
+  /* show only the border, not the fill */
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  pointer-events: none; /* don’t block clicks */
+  z-index: 0;
+}
+
+.border-gradient {
+  background: linear-gradient(
+    221deg,
+    rgba(21, 226, 159, 0.4),
+    rgba(255, 255, 255, 0.2)
+  );
+}
+
+.bg-gradient {
+  background: linear-gradient(180deg, #19a4d5 0%, #013370 20%, #135287 100%);
+}
+
+.h1-gradient {
+  background: linear-gradient(276deg, #fff 20.06%, #41a5ff 214.35%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+  box-shadow: 0 0 0px 1000px transparent inset !important;
+  -webkit-text-fill-color: #000 !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
