@@ -1,5 +1,7 @@
 import React from 'react';
 import BackgroundImage from '../../assets/about/hero/background.png';
+import { motion } from 'framer-motion';
+import { Typewriter } from '../../UI/Typewriter';
 
 const Hero = () => {
   return (
@@ -15,12 +17,26 @@ const Hero = () => {
 
       {/* Content */}
       <div className="z-10 flex flex-col items-center gap-6 px-6 text-center">
-        <h2 className="h1-gradient h1 font-pp font-bold">About Medtatvaa</h2>
-        <p className="max-w-[510px] text-[14px] font-medium leading-[120%] text-n-1 md:text-[16px]">
-          Radiology has advanced in science, but the systems that power it have
-          not kept pace. Providers still face disjointed RIS and PACS setups,
-          care teams struggle with...
-        </p>
+        <motion.h2
+          className="h1-gradient h1 font-pp font-bold"
+          initial={{ filter: 'blur(40px)', opacity: 0 }}
+          animate={{ filter: 'blur(0px)', opacity: 1 }}
+          transition={{ duration: 0.7, ease: 'easeOut' }}
+        >
+          <Typewriter text={"About Medtatvaa"}/>
+          
+        </motion.h2>
+        <motion.p
+          className="max-w-[510px] text-[14px] font-medium leading-[120%] text-n-1 md:text-[16px]"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: 'easeInOut' }}
+        >
+          Medtatvaa is here to build alongside the people who make healthcare
+          possible — designing technology that listens to your needs, adapts to
+          your workflows, and makes diagnostics simpler, smarter, and more
+          human.
+        </motion.p>
       </div>
     </section>
   );

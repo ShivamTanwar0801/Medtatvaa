@@ -379,7 +379,7 @@ export const workflowSteps = [
     id: 'step-5',
     title: 'A manager checks',
     subTitle: 'Real-time dashboards show performance and revenue',
-    image: Step5,
+    image: Step2,
   },
 ];
 
@@ -457,7 +457,7 @@ export const missionSteps = [
   {
     id: 'mission-step-2',
     title: 'Our Vision',
-    desc: 'Our Vision: To rebuild the infrastructure of diagnostics with modern technology that unifies workflows and enables radiology teams to deliver care with greater speed, precision, and collaboration.',
+    desc: 'To empower radiologists with tools that elevate their expertise and to ensure every patient’s scan leads to faster answers and better care.',
   },
 ];
 

@@ -9,15 +9,15 @@ const slides = diagnosticCards.map((card) => (
     className="border-gradient h-full w-full rounded-[15px] p-[1px] shadow-[0_4px_13px_0_rgba(0,0,0,0.05)] overflow-clip"
     key={card.id}
   >
-    <div className="flex h-full flex-col justify-between gap-6 rounded-[15px] bg-n-1 pl-[20px] pt-[36px]">
+    <div className="flex h-full flex-col justify-between gap-4 md:gap-6 rounded-[15px] bg-n-1 pl-[20px] pt-4 md:pt-[36px]">
       <h2 className="font-pp text-[24px] font-bold leading-[100%] text-[#141E5A] lg:text-[32px]">
         {card.title}
       </h2>
-      <p className="max-w-[60%] font-pp font-medium leading-[100%] md:min-h-[40px] lg:text-[20px]">
+      <p className="md:max-w-[60%] font-pp font-medium leading-[110%] md:min-h-[40px] lg:text-[20px] pr-5">
         {card.subText}
       </p>
       <div className="flex h-full flex-col justify-between gap-5 lg:flex-row lg:items-end">
-        <ul className="z-10 flex flex-1 flex-col gap-6 pr-5">
+        <ul className="z-10 flex flex-1 flex-col gap-[14px] md:gap-6 pr-5">
           {card.points.map((item) => (
             <span className="flex gap-2.5" key={item.id}>
               <img src={tick} />
@@ -26,7 +26,7 @@ const slides = diagnosticCards.map((card) => (
               </p>
             </span>
           ))}
-          <h3 className="text-gradient h3 pb-9 pr-5 font-pp font-bold">
+          <h3 className="text-gradient h3 pb-4 md:pb-9 pr-5 font-pp font-bold">
             {card.footerText}
           </h3>
         </ul>
@@ -53,6 +53,7 @@ const TickerCarousel = () => {
   const [isAnimating, setIsAnimating] = useState(true);
   const firstRender = useRef(true);
   const containerRef = useRef(null);
+  const [isPaused, setIsPaused] = useState(false);
 
   // After first mount, enable animations
   useEffect(() => {
@@ -65,12 +66,14 @@ const TickerCarousel = () => {
 
   // Auto-slide
   useEffect(() => {
+    if (isPaused) return;
+
     const interval = setInterval(() => {
       setIndex((prev) => prev + 1);
     }, 5000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [isPaused]);
 
   // Loop handling
   useEffect(() => {
@@ -108,8 +111,8 @@ const TickerCarousel = () => {
     index === 0
       ? totalSlides - 1
       : index === extendedSlides.length - 1
-        ? 0
-        : index - 1;
+      ? 0
+      : index - 1;
 
   const goToSlide = (i) => {
     setIsAnimating(true);
@@ -121,7 +124,9 @@ const TickerCarousel = () => {
       {/* Carousel */}
       <div
         ref={containerRef}
-        className="relative w-full overflow-hidden rounded-xl object-cover xl:overflow-visible "
+        className="relative w-full overflow-hidden rounded-xl object-cover xl:overflow-visible"
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
       >
         <motion.div
           className="flex xl:gap-8"
@@ -136,18 +141,25 @@ const TickerCarousel = () => {
               idx === 0
                 ? totalSlides - 1
                 : idx === extendedSlides.length - 1
-                  ? 0
-                  : idx - 1;
+                ? 0
+                : idx - 1;
 
             const isActive = cardRealIndex === realIndex;
 
             return (
               <motion.div
                 key={idx}
-                className="w-full flex-shrink-0 xl:w-[90%]"
+                className={`w-full flex-shrink-0 xl:w-[90%] ${
+                  isActive ? 'cursor-pointer' : ''
+                }`}
                 animate={{
-                  scale: window.innerWidth >= 1280 && isActive ? 1.05 : 1, // scale only on xl+
+                  scale: window.innerWidth >= 1280 && isActive ? 1.05 : 1,
                 }}
+                whileHover={
+                  isActive && window.innerWidth >= 1280
+                    ? { scale: 1.06 }
+                    : {}
+                }
                 transition={{ duration: 0.5 }}
               >
                 {card}
@@ -158,7 +170,7 @@ const TickerCarousel = () => {
       </div>
 
       {/* Dots */}
-      <div className="flex justify-center gap-4 pt-5 md:pt-10">
+      <div className="flex justify-center gap-4 pt-4 md:pt-10">
         {slides.map((_, i) => (
           <button
             key={i}

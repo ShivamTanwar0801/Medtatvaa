@@ -28,7 +28,7 @@ const CTA = () => {
             transition={{ duration: 0.4, ease: 'easeOut' }}
             viewport={{ once: true }}
           >
-            <Typewriter text={'We’re here to help you deliver patient-first diagnostics'} />
+            <Typewriter text={'We’re here to help you modernize radiology operations'} />
           </motion.h1>
           <motion.p
             className="max-w-[90%] pb-8 font-medium leading-5 text-white sm:pb-12"

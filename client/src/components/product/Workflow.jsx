@@ -105,7 +105,7 @@ const Workflow = () => {
         </div>
 
         {/* Right side: Image */}
-        <div className="relative hidden w-full max-w-[610px] overflow-clip rounded-[15px] border-x-[1px] border-t-[1px] border-[#15E29F]/40 p-[22px] shadow-[0_4px_13px_0_rgba(0,0,0,0.05)] lg:block">
+        <div className="relative hidden w-full max-w-[610px] min-w-[610px] overflow-clip rounded-[15px] border-x-[1px] border-t-[1px] border-[#15E29F]/40 p-[22px] shadow-[0_4px_13px_0_rgba(0,0,0,0.05)] lg:block">
           <div className="relative flex justify-center">
             <AnimatePresence mode="wait">
               <div className="absolute inset-0 flex items-center justify-center">

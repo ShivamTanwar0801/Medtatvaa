@@ -1,7 +1,13 @@
 import React from 'react';
 import Button from './Button';
 
-const Input = ({emailHandler, email, setEmail, setError}) => {
+const Input = ({
+  emailHandler,
+  email,
+  setEmail,
+  setError,
+  btnText = 'Start a free trial',
+}) => {
   return (
     <form
       className="flex w-full max-w-[502px] justify-between gap-['auto'] rounded-[100px] bg-color-3/80 py-[6px] pl-3 pr-[6px] sm:py-[8px] sm:pl-[24px] sm:pr-[8px]"
@@ -20,7 +26,7 @@ const Input = ({emailHandler, email, setEmail, setError}) => {
         required
       />
       <Button className="button__gradient ml-2 text-nowrap text-n-1">
-        Start a free trial
+        {btnText}
       </Button>
     </form>
   );
