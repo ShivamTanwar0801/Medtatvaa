@@ -69,12 +69,7 @@ const Journey = () => {
           professional eager to make a difference, or a mentor who can guide us
           with your experience, we’d love to connect
         </motion.p>
-        <motion.div
-          className="relative w-full max-w-[502px]"
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: 'easeInOut' }}
-        >
+        <motion.div className="relative w-full max-w-[502px]" >
           {error && (
             <p className="absolute left-4 top-[-16px] z-10 mb-2 text-[12px] font-normal leading-[100%] text-red-500">
               {error}

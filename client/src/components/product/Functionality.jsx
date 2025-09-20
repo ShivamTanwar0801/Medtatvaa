@@ -18,12 +18,25 @@ const Functionality = () => {
       <div className="grid w-full gap-x-5 gap-y-4 md:w-auto md:grid-cols-2 md:grid-rows-2 md:gap-y-12">
         {functionalityCards.map((card, index) => (
           <motion.div
-            className="border-gradient flex-1 rounded-[15px] p-[1px] shadow-[0_4px_13px_0_rgba(0,0,0,0.05)] md:max-w-[386px]"
+            className="border-gradient relative flex-1 overflow-clip rounded-[15px] p-[1px] shadow-[0_4px_13px_0_rgba(0,0,0,0.05)] md:max-w-[386px]"
             key={card.id}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.1, delay: index * 0.15 }}
+            transition={{ duration: 0.3, delay: index * 0.15 }}
+            whileHover={{scale: 1.05, }}
           >
+            <div
+              className={`blue__gradient absolute aspect-square w-full max-w-[372px] rounded-full p-[40px] opacity-10 ${card.class1}`}
+            >
+              <div className="aspect-square w-full max-w-[372px] rounded-full bg-n-1"></div>
+            </div>
+
+            <div
+              className={`blue__gradient absolute aspect-square w-full max-w-[372px] rounded-full p-[40px] opacity-10 ${card.class2}`}
+            >
+              <div className="aspect-square w-full max-w-[372px] rounded-full bg-n-1"></div>
+            </div>
+
             <div className="flex h-full flex-col gap-6 rounded-[15px] bg-n-1 px-[20px] py-[36px]">
               <h2 className="font-pp text-[24px] font-bold leading-[100%] text-[#141E5A] lg:text-[32px]">
                 {card.title}

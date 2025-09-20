@@ -23,7 +23,6 @@ import Step5 from '../assets/product/workflow/step5.png';
 import Profile from '../assets/about/team/profile.png';
 
 export const navLinks = [
-  
   {
     url: '/resources',
     title: 'Resources',
@@ -247,6 +246,8 @@ export const functionalityCards = [
       { id: 'point-3', point: 'Smart templated reports' },
       { id: 'point-4', point: 'Instant access to previous studies' },
     ],
+    class1: 'left-1/2 bottom-1/2',
+    class2: 'right-1/2 top-1/2 opacity-5',
   },
   {
     id: 'functionality-card-2',
@@ -258,11 +259,13 @@ export const functionalityCards = [
       { id: 'point-23', point: 'Status updates for each scan' },
       { id: 'point-24', point: 'No need to chase down case info' },
     ],
+    class1: 'right-1/2 bottom-2/3',
+    class2: 'left-1/2 top-1/2 opacity-5',
   },
   {
     id: 'functionality-card-3',
     title: 'Admin / Front Desk',
-    subText: 'Easy scheduling, no double entries, fewer mistakes.',
+    subText: 'Easy scheduling, no double entries, fewer mistakes',
     points: [
       {
         id: 'point-31',
@@ -272,6 +275,8 @@ export const functionalityCards = [
       { id: 'point-33', point: 'One-click registration' },
       { id: 'point-34', point: 'Fewer handoffs, less paperwork' },
     ],
+    class1: 'right-1/2 bottom-2/3',
+    class2: 'left-1/2 top-1/2 opacity-5',
   },
   {
     id: 'functionality-card-4',
@@ -286,6 +291,8 @@ export const functionalityCards = [
       { id: 'point-43', point: 'Technician/radiologist productivity metrics' },
       { id: 'point-44', point: 'No server maintenance, no surprise costs' },
     ],
+    class1: 'left-1/2 bottom-1/2',
+    class2: 'right-1/2 top-1/2 opacity-5',
   },
 ];
 
@@ -387,18 +394,18 @@ export const faqAccordion = [
   {
     question: 'How is DICOMDrive different from a traditional RIS-PACS?',
     answer:
-      'Traditional RIS-PACS systems are fragmented, server-heavy, and often outdated. DICOMdrive is cloud-native, AI-powered, and designed to bring scheduling, imaging, reporting, and analytics into a single seamless platform.',
+      'Traditional RIS-PACS systems are fragmented, server-heavy, and often outdated. DICOMDrive is cloud-native, AI-powered, and designed to bring scheduling, imaging, reporting, and analytics into a single seamless platform.',
     id: 'accordion-1',
   },
   {
-    question: 'Is DICOMdrive secure and compliant with healthcare regulations?',
+    question: 'Is DICOMDrive secure and compliant with healthcare regulations?',
     answer:
       'Yes. DICOMDrive uses end-to-end encryption, role-based access controls, and automated redundancy to keep patient data safe and accessible. We’re built to align with international healthcare data protection standards.',
     id: 'accordion-2',
   },
   {
     question:
-      'Does DICOMdrive work for small diagnostic centers as well as larger hospitals?',
+      'Does DICOMDrive work for small diagnostic centers as well as larger hospitals?',
     answer:
       'Absolutely. Whether you’re a single-site clinic or a multi-location network, DICOMDrive scales effortlessly. Smaller centers benefit from low setup costs, while larger enterprises gain centralized workflows and unlimited scalability.',
     id: 'accordion-3',

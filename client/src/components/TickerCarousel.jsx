@@ -10,10 +10,10 @@ const slides = diagnosticCards.map((card) => (
     key={card.id}
   >
     <div className="flex h-full flex-col justify-between gap-4 md:gap-6 rounded-[15px] bg-n-1 pl-[20px] pt-4 md:pt-[36px]">
-      <h2 className="font-pp text-[24px] font-bold leading-[100%] text-[#141E5A] lg:text-[32px]">
+      <h2 className="font-pp text-[20px] md:text-[24px] font-bold leading-[100%] text-[#141E5A] lg:text-[32px]">
         {card.title}
       </h2>
-      <p className="md:max-w-[60%] font-pp font-medium leading-[110%] md:min-h-[40px] lg:text-[20px] pr-5">
+      <p className="md:max-w-[60%] font-pp font-medium leading-[110%] md:min-h-[40px] text-[14px] md:text-[16px] lg:text-[20px] pr-5">
         {card.subText}
       </p>
       <div className="flex h-full flex-col justify-between gap-5 lg:flex-row lg:items-end">
@@ -26,7 +26,7 @@ const slides = diagnosticCards.map((card) => (
               </p>
             </span>
           ))}
-          <h3 className="text-gradient h3 pb-4 md:pb-9 pr-5 font-pp font-bold">
+          <h3 className="text-gradient h3 pb-4 md:pb-9 font-pp font-bold">
             {card.footerText}
           </h3>
         </ul>
