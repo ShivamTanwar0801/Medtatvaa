@@ -1,6 +1,6 @@
 import React from 'react';
 import { ChevronDown } from 'lucide-react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import { navLinks } from '../constants';
 import { createPortal } from 'react-dom';
 
@@ -25,9 +25,8 @@ const Navigation = ({ setOpenDropdown, openDropdown, handleClick }) => {
 
             {openDropdown && (
               <div className="absolute left-0 top-[25px] z-50 mt-2 hidden w-48 rounded-md border bg-white p-2 shadow-lg xl:mt-4 xl:block">
-                <a
-                  target="_blank"
-                  rel="noreferrer"
+                <Link
+                  to='/products'
                   onClick={() => {
                     setOpenDropdown(false);
                     handleClick();
@@ -35,7 +34,7 @@ const Navigation = ({ setOpenDropdown, openDropdown, handleClick }) => {
                   className="block px-4 py-2 text-sm font-medium hover:bg-gray-100"
                 >
                   DICOMDrive
-                </a>
+                </Link>
               </div>
             )}
           </div>

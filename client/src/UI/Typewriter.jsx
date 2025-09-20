@@ -4,7 +4,7 @@ export const sentenceVariants = {
   hidden: {},
   visible: { 
     opacity: 1, 
-    transition: { staggerChildren: 0.05 } 
+    transition: { staggerChildren: 0.04 } 
   },
 };
 
@@ -20,7 +20,7 @@ export const Typewriter = ({ text, delay = 0, ...rest }) => (
       hidden: {},
       visible: {
         opacity: 1,
-        transition: { delay, staggerChildren: 0.03 },
+        transition: { delay, staggerChildren: 0.02 },
       },
     }}
     initial="hidden"

@@ -21,7 +21,7 @@ const Heading = ({ subHeading, heading, subText }) => {
         {heading}
       </motion.h2>
       <motion.p
-        className="font-pp text-[20px] font-medium text-[#141E5A]"
+        className="font-pp text-[20px] font-medium text-[#141E5A] md:max-w-[70%]"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: 'easeInOut' }}

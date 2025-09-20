@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import Logo from '../assets/svg/Logo.svg';
 import MenuSvg from '../assets/svg/MenuSvg';
 import { navLinks } from '../constants';
@@ -13,6 +13,9 @@ const Header = () => {
   const [openNavigation, setOpenNavigation] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(false);
   const [isScrolling, setIsScrolling] = useState(false);
+
+  const location = useLocation();
+  const isAboutPage = location.pathname === '/about';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -60,7 +63,7 @@ const Header = () => {
               openNavigation
                 ? 'bg-[#FBFBFB] xl:bg-transparent' // solid background when menu is open
                 : '' // transparent + blur when closed
-            } ${isScrolling && !openNavigation ? 'bg-n-2/70 backdrop-blur-sm' : ''}`}
+            } ${isScrolling && !openNavigation ? '!bg-n-2/70 backdrop-blur-sm' : ''} ${isAboutPage && !openNavigation ? 'bg-n-2/60' : ''} `}
           >
             <div
               className={`flex w-full flex-col gap-[30px] text-nowrap pt-2 ${

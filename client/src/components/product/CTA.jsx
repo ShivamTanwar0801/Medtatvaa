@@ -1,8 +1,8 @@
-import Logo1 from '../assets/CTA/Logo1.svg';
-import Logo2 from '../assets/CTA/Logo2.png';
-import Scan from '../assets/CTA/Scan.png';
-import { Typewriter } from '../UI/Typewriter';
-import Button from './Button';
+import Logo1 from '../../assets/CTA/Logo1.svg';
+import Logo2 from '../../assets/CTA/Logo2.png';
+import Scan from '../../assets/product/CTA/Scan.png';
+import { Typewriter } from '../../UI/Typewriter';
+import Button from '../Button';
 import { motion } from 'framer-motion';
 
 const CTA = () => {
@@ -28,7 +28,7 @@ const CTA = () => {
             transition={{ duration: 0.4, ease: 'easeOut' }}
             viewport={{ once: true }}
           >
-            <Typewriter text={'Run Your Radiology Center Like It’s 2025'} />
+            <Typewriter text={'We’re here to help you deliver patient-first diagnostics'} />
           </motion.h1>
           <motion.p
             className="max-w-[90%] pb-8 font-medium leading-5 text-white sm:pb-12"
@@ -37,10 +37,7 @@ const CTA = () => {
             transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.4 }}
             viewport={{ once: true }}
           >
-            Still waiting hours to generate reports? Still handing patients CDs?
-            Let’s change that. DICOMDrive helps you report faster, access
-            everything from anywhere, and finally leave outdated workflows
-            behind.
+            Smarter tools for your staff, clearer results for your patients, and a system everyone loves to use.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -52,7 +49,7 @@ const CTA = () => {
               className="bg-white hover:bg-[linear-gradient(93deg,#027dec,#15e29f)] hover:text-n-1"
               href="/contact"
             >
-              Talk to us
+              Book a demo
             </Button>
           </motion.div>
         </div>
@@ -61,7 +58,7 @@ const CTA = () => {
           className="relative overflow-clip rounded-[15px] bg-[#FEFEFE] px-2.5 py-5 md:px-[17.5px] md:py-[35px]"
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.4 }}
+          transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}
           viewport={{ once: true }}
         >
           {/* Image wrapper */}

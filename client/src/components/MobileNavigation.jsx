@@ -1,6 +1,6 @@
 import React from 'react';
 import { ChevronDown } from 'lucide-react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { navLinks, products } from '../constants';
 import Button from './Button';
 import { AnimatePresence, motion } from 'framer-motion';
@@ -16,7 +16,7 @@ const MobileNavigation = ({
       {isOpen && (
         <motion.div
           key="mobile-nav"
-          className="w-full overflow-hidden border-t-[1px] border-n-8/30 bg-[#FBFBFB]/10 xl:hidden "
+          className="w-full overflow-hidden border-t-[1px] border-n-8/30 bg-[#FBFBFB]/10 xl:hidden"
           initial={{ height: 0, opacity: 0 }}
           animate={{ height: 'auto', opacity: 1 }}
           exit={{ height: 0, opacity: 0 }}
@@ -46,22 +46,20 @@ const MobileNavigation = ({
                       animate={{ opacity: 1, height: 'auto' }}
                       exit={{ opacity: 0, height: 0 }}
                       transition={{ duration: 0.1, ease: 'easeInOut' }}
-                      className="mt-2 w-48 p-2 xl:mt-4 pb-0"
+                      className="mt-2 w-48 p-2 pb-0 xl:mt-4"
                     >
                       {products.map((item) => (
-                        <a
-                          
+                        <Link
                           key={item.id}
                           onClick={() => {
                             setOpenDropdown(false);
                             handleClick();
                           }}
-                          className="block px-4 text-[16px] hover:bg-gray-200 font-medium"
-                          target="_blank"
-                          rel="noreferrer"
+                          className="block px-4 text-[16px] font-medium hover:bg-gray-200"
+                          to="/products"
                         >
                           {item.title}
-                        </a>
+                        </Link>
                       ))}
                     </motion.div>
                   )}
@@ -85,16 +83,16 @@ const MobileNavigation = ({
 
           <div className="flex gap-4 py-6">
             <Button
-              className="flex text-nowrap border-[1px] border-[#15E29F] justify-center flex-1"
+              className="flex flex-1 justify-center text-nowrap border-[1px] border-[#15E29F]"
               onClick={handleClick}
-              href='/contact'
+              href="/contact"
             >
               Book a demo
             </Button>
             <Button
-              className="button__gradient flex text-n-1 justify-center flex-1"
+              className="button__gradient flex flex-1 justify-center text-n-1"
               onClick={handleClick}
-              href=''
+              href=""
             >
               Start a free trial
             </Button>

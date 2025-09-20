@@ -93,7 +93,7 @@ export default withMT({
           '@apply max-w-[1280px] mx-auto px-5 md:px-10 lg:px-10': {},
         },
         '.h1': {
-          '@apply font-semibold text-[2rem] leading-[2rem] sm:text-[2.5rem] sm:leading-[2.5rem] md:text-[3rem] md:leading-[3rem] xl:text-[4rem] xl:leading-[4rem]':
+          '@apply text-[2rem] leading-[2rem] sm:text-[2.5rem] sm:leading-[2.5rem] md:text-[3rem] md:leading-[3rem] xl:text-[4rem] xl:leading-[4rem]':
             {},
         },
         '.h2': {

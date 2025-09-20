@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Button from './Button';
-import TickerCarousel from './TickerCarousel';
+
 import axios from 'axios';
 import mainImg from '../assets/hero/main.png';
 import { delay, motion } from 'framer-motion';
@@ -70,7 +70,7 @@ const Hero = () => {
             />
           </motion.h1>
           <motion.p
-            className="pt-4 font-medium sm:pt-6 lg:max-w-[518px]"
+            className="pt-4 font-medium sm:pt-6 lg:max-w-[518px] md:text-[20px] font-pp"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: 'easeInOut', delay: 1.1 }}
