@@ -22,9 +22,9 @@ export const Features = () => {
             <h2 className="font-pp text-[24px] font-bold leading-[100%] text-[#141E5A] lg:text-[32px]">
               Radiology operations are stuck in silos
             </h2>
-            <p className="font-pp font-medium lg:text-[20px]">
-              Multiple disjointed tools. Slow, manual reporting, Scattered image
-              storage. Endless switching.
+            <p className="font-pp font-medium lg:max-w-[90%] lg:text-[20px]">
+              Multiple disjointed tools. Slow and manual reporting. Scattered
+              image storage. Endless switching.
             </p>
             <img src={iconTree} className="md:max-h-[318px]" />
           </div>
@@ -41,7 +41,7 @@ export const Features = () => {
             <h2 className="h1-gradient px-6 font-pp text-[24px] font-bold leading-[100%] lg:text-[32px]">
               DICOMDrive brings them all together
             </h2>
-            <p className="px-6 font-pp font-medium text-white lg:text-[20px]">
+            <p className="px-6 font-pp font-medium text-white lg:max-w-[90%] lg:text-[20px]">
               This is the upgrade your diagnostic center has been waiting for.
             </p>
             <img src={FeatureTree} className="max-h-[291px] px-6" />

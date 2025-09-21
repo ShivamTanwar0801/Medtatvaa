@@ -374,7 +374,7 @@ export const workflowSteps = [
     id: 'step-3',
     title: 'A radiologist reads',
     subTitle: 'AI reporting and voice dictation speed up reporting',
-    image: Step4,
+    image: Step2,
   },
   {
     id: 'step-4',
@@ -386,7 +386,7 @@ export const workflowSteps = [
     id: 'step-5',
     title: 'A manager checks',
     subTitle: 'Real-time dashboards show performance and revenue',
-    image: Step2,
+    image: Step4,
   },
 ];
 
