@@ -62,7 +62,10 @@ const Legacy = () => {
                 </span>
               ))}
             </ul>
-            <Button className="z-10 mb-2 mt-5 max-w-[198px] bg-[linear-gradient(276deg,rgba(255,255,255,0.10)_20.06%,rgba(65,165,255,0.10)_214.35%)] text-n-2 hover:text-black hover:bg-white transition-all">
+            <Button
+              className="z-10 mb-2 mt-5 block max-w-[198px] bg-[linear-gradient(276deg,rgba(255,255,255,0.10)_20.06%,rgba(65,165,255,0.10)_214.35%)] text-n-2 transition-all hover:bg-white hover:text-black"
+              href="/products"
+            >
               Explore DICOMDrive
             </Button>
           </div>

@@ -194,7 +194,7 @@ export const footerLinks = [
     title: 'Contact Us',
     links: [
       {
-        name: 'Sales/ BusinessInquiry',
+        name: 'Sales/ Business Inquiry',
         link: '',
       },
     ],

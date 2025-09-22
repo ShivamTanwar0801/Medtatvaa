@@ -39,7 +39,7 @@ const Radiology = () => {
       <motion.div className="flex flex-wrap gap-5">
         {radiologyCards.map((item, index) => (
           <motion.div
-            className="border-gradient min-w-[350px] flex-1 rounded-[15px] p-[1px] shadow-[0_4px_13px_0_rgba(0,0,0,0.05)] hover:shadow-[0_4px_33px_0_rgba(159,174,168,0.37)] xxs:min-w-[386px] transition-shadow"
+            className="border-gradient min-w-[350px] flex-1 rounded-[15px] p-[1px] shadow-[0_4px_13px_0_rgba(0,0,0,0.05)] transition-shadow hover:shadow-[0_4px_33px_0_rgba(159,174,168,0.37)] xxs:min-w-[386px]"
             key={item.id}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -66,7 +66,10 @@ const Radiology = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        <Button className="button__gradient mt-5 text-n-1 sm:mt-12">
+        <Button
+          className="button__gradient mt-5 text-n-1 sm:mt-12 block"
+          href="products"
+        >
           See the complete platform
         </Button>
       </motion.div>

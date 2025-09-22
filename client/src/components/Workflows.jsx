@@ -24,12 +24,8 @@ const Workflows = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="z-20 flex w-full lg:max-h-[267px]">
-              <img
-                src={item.image}
-                className="z-20 aspect-[357/267] w-full lg:w-auto"
-                height={267}
-              />
+            <div className="z-20 lg:min-h-[330px]">
+              <img src={item.image} className="z-20" />
             </div>
             <div>
               <h4 className="font-pp text-[20px] font-medium leading-5">
@@ -58,7 +54,10 @@ const Workflows = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        <Button className="button__gradient mt-5 text-n-1 sm:mt-12">
+        <Button
+          className="button__gradient mt-5 text-n-1 sm:mt-12 block"
+          href="/products"
+        >
           Explore DICOMDrive
         </Button>
       </motion.div>

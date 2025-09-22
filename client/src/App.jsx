@@ -8,6 +8,7 @@ import Contact from './pages/Contact';
 import axios from 'axios';
 import { useEffect } from "react";
 import Lenis from "@studio-freight/lenis";
+import ScrollToTop from './UI/ScrollToTop';
 
 axios.defaults.baseURL =
   import.meta.env.VITE_BACKEND_URL || 'http://localhost:5000/api';
@@ -30,6 +31,7 @@ function App() {
 
   return (
     <>
+      <ScrollToTop/>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
